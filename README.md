@@ -1,5 +1,3 @@
----
-
 # 📱 FDM - OFICINA App
 
 Aplicativo mobile para **gestão de serviços** com separação por status, desenvolvido em **React Native** usando **Expo Router**.
