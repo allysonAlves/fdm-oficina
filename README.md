@@ -1,50 +1,90 @@
-# Welcome to your Expo app 👋
+---
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+# 📱 FDM - OFICINA App
 
-## Get started
+Aplicativo mobile para **gestão de serviços** com separação por status, desenvolvido em **React Native** usando **Expo Router**.
+Permite **criar**, **editar**, **pesquisar** e **gerenciar** serviços nos estados: **Andamento**, **Finalizados** e **Entregues**.
 
-1. Install dependencies
+---
 
-   ```bash
-   npm install
-   ```
+## 🛠️ Tecnologias Utilizadas
 
-2. Start the app
+- **React Native** (via **Expo**)
+- **Expo Router** (navegação por rotas)
+- **Zustand** (gerenciamento de estado)
+- **AsyncStorage** (persistência local)
+- **React Hook Form** + **Yup** (formulários e validação)
+- **React Native Paper** (UI Kit)
+- **Expo Vector Icons** (ícones)
+- **TypeScript**
 
-   ```bash
-   npx expo start
-   ```
+---
 
-In the output, you'll find options to open the app in a
+## ✨ Funcionalidades
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+- Listagem de serviços por status: **DOING**, **FINISHED**, **DELIVERED**.
+- Pesquisa de serviços pela **placa**.
+- Cadastro de novos serviços.
+- Edição de serviços existentes.
+- Alteração de status de serviço.
+- Exclusão de serviços.
+- Estado persistido utilizando **AsyncStorage**.
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+---
 
-## Get a fresh project
+## 📂 Estrutura de Pastas
 
-When you're ready, run:
-
-```bash
-npm run reset-project
+```
+src/
+ ├─ @types/         # Tipagens compartilhadas
+ ├─ hooks/          # Hooks personalizados
+ ├─ store/          # Zustand store
+ ├─ utils/          # Funções utilitárias
+ └─ app/            # Expo Router Pages
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+---
 
-## Learn more
+## 🚀 Como rodar o projeto
 
-To learn more about developing your project with Expo, look at the following resources:
+### Pré-requisitos
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+- Node.js >= 18
+- Yarn ou NPM
 
-## Join the community
+---
 
-Join our community of developers creating universal apps.
+### Passos
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+```bash
+# Instale as dependências
+yarn
+
+# Rode o projeto
+npx expo start
+```
+
+---
+
+## 🛤️ Navegação
+
+O app utiliza **Tabs**:
+
+| Tab             | Função                         |
+| :-------------- | :----------------------------- |
+| **Andamento**   | Lista de serviços em andamento |
+| **Finalizados** | Lista de serviços finalizados  |
+| **Entregues**   | Lista de serviços entregues    |
+
+---
+
+## 📝 Observações
+
+- O ID do serviço é gerado **incrementalmente**.
+- Todas as alterações são salvas localmente utilizando o **AsyncStorage**.
+- O botão de **editar** e **excluir** aparece em cada card de serviço.
+- Ícones consistentes para representar ações em cada tela.
+
+## 📃 Licença
+
+Este projeto está sob a licença MIT.
